@@ -15,7 +15,7 @@ pipeline {
         stage('colocando en volumen el archivo') {
             steps {
                 script {
-                    sh 'cp /var/jenkins_home/workspace/Tarea3/index.html /usr/local/apache2/htdocs/index.html'
+                    sh 'cp /var/jenkins_home/workspace/Tarea3/index.html /www/index.html'
                 }
             }
         }
