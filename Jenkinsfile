@@ -5,7 +5,7 @@ pipeline {
         stage('comprobando index.html') {
             steps {
                 sh '''
-                index=/var/www/index.html
+                index=/usr/local/apache2/htdocs/index.html
                 ws=/var/jenkins_home/workspace/Tarea3
                 if [ -e $index ]; then rm -rf $index; fi
                 '''
@@ -15,7 +15,7 @@ pipeline {
         stage('colocando en volumen el archivo') {
             steps {
                 script {
-                    sh 'cp /var/jenkins_home/workspace/Tarea3/index.html /www/index.html'
+                    sh 'cp /var/jenkins_home/workspace/Tarea3/index.html /usr/local/apache2/htdocs/index.html'
                 }
             }
         }
