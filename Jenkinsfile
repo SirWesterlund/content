@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     stages {
-        stage('comprobando index.html') {
+        stage('testeando el index.html') {
             steps {
                 sh '''
                 index=/usr/local/apache2/htdocs/index.html
@@ -12,7 +12,7 @@ pipeline {
             }
         }
         
-        stage('colocando en volumen el archivo') {
+        stage('metiendo el index.html en el docker apache') {
             steps {
                 script {
                     sh 'cp /var/jenkins_home/workspace/Tarea3/index.html /www/index.html'
